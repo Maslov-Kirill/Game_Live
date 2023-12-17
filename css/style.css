@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(50, 20px);
+  grid-gap: 1px;
+  background-color: #ddd;
+}
+
+.resize {
+  margin-top: 10px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 30), 20px);
+  gap: 0px;
+}
+
+.grid-item {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.grid-item.active {
+  background-color: black;
+}
+
+#controls {
+  margin-bottom: 10px;
+}

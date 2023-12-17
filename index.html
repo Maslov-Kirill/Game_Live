@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script defer src="src/live.js"></script>
+    <title>Game of Life</title>
+  </head>
+  <body>
+    <div id="controls">
+      <button onclick="randomInit()">Randomize</button>
+      <button onclick="startGame()">Start</button>
+      <button onclick="stopGame()">Stop</button>
+      <button onclick="clearGrid()">Clear</button>
+
+      Speed:
+      <input
+        type="range"
+        min="10"
+        max="1000"
+        value="100"
+        oninput="changeSpeed(this.value)"
+      />
+      <span id="speedValue">100 ms</span>
+      <div class="resize">
+        Rows
+        <input
+          type="number"
+          id="rowsInput"
+          min="1"
+          value="30"
+          oninput="changeGridSize()"
+        />
+        Columns
+        <input
+          type="number"
+          id="colsInput"
+          min="1"
+          value="30"
+          oninput="changeGridSize()"
+        />
+      </div>
+    </div>
+    <div id="grid"></div>
+  </body>
+</html>
